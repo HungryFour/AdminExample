@@ -42,8 +42,7 @@
                         class="login-btn"
                         v-loading="loading"
                 >登 录
-                </el-button
-                >
+                </el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -77,7 +76,7 @@
                 setTimeout(() => {
                   this.loading = false;
                   sessionStorage.setItem("user", JSON.stringify(this.loginForm));
-                  this.$router.replace({path: "/console"});
+                  this.$router.replace({path: "/dashboard"});
                 }, 2000);
               } else {
                 this.loading = false;

@@ -5,9 +5,9 @@
         <button class="btn-tool" title="折叠" @click="collapse" >
             <i class="el-icon-d-arrow-left"></i>
         </button>
-        <button class="btn-tool" title="刷新" @click="refresh">
-            <i class="el-icon-refresh"></i>
-        </button>
+<!--        <button class="btn-tool" title="刷新" @click="refresh">-->
+<!--            <i class="el-icon-refresh"></i>-->
+<!--        </button>-->
         <button class="btn-tool" title="全屏" @click="Utils.fullScreen">
             <i class="el-icon-full-screen"></i>
         </button>

@@ -2,7 +2,8 @@
     <el-container class="index-box">
         <el-aside width="asideWidth">
             <div class="logo">
-                <img v-if="!isCollapse" style="width: 120px; height: 60px" src="./../assets/logo.png" alt="DBMind">
+                <img v-if="!isCollapse" style="width: 180px; height: 60.82px" src="./../assets/logo.png" alt="DBMind">
+                <img v-if="isCollapse" style="width: 50px; height: 50px" src="./../assets/logo_icon.png" alt="DBMind">
             </div>
             <menus :isCollapse="isCollapse"/>
         </el-aside>
@@ -71,19 +72,20 @@
         }
 
         .el-aside {
-            background-color: #20222A;
+            background-color: #FFFFFF;
             height: 100vh;
             min-height: 100%;
 
             .logo {
-                background-color: #20222A;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFFFFF;
                 color: rgba(255, 255, 255, .8);
                 text-align: center;
                 height: 60px;
-                padding-top: 16px;
-                font-size: 16px;
                 box-sizing: border-box;
-                border-bottom: 1px solid gray;
+                border-bottom: 1px solid #f6f6f6;
             }
         }
 
