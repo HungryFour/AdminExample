@@ -20,6 +20,7 @@
 
             <el-form-item label="日期选择:">
                 <el-date-picker
+                        style="width: 160px"
                         v-model="dateSelectCondition"
                         type="date"
                         placeholder="选择日期"
@@ -29,7 +30,7 @@
 
             <el-form-item label="Analyze Type:">
                 <el-select
-                        style="min-width: 260px"
+                        style="min-width: 160px"
                         clearable
                         filterable
                         placeholder="请选择"

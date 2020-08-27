@@ -7,12 +7,12 @@
             <div class="center_content_container" style="width: 80%">
 
                 <div style="display: flex; flex-direction: row">
-                    <div class="content_item_container" style="width: 20%; margin-right: 2%">
+                    <div class="content_item_container" style="width: 22%; margin-right: 2%">
                         <div class="content_item_title_container">选择负载</div>
                         <div class="select_container" style="width: 100%">
                             <div class="select_title">负载:</div>
                             <el-select
-                                    style="min-width: 120px; width: 60%"
+                                    style="min-width: 130px; width: 60%; margin-right: 10px"
                                     clearable
                                     filterable
                                     placeholder="请选择负载"
@@ -29,7 +29,7 @@
                         <div class="select_container" style="width: 100%">
                             <div class="select_title">数据集:</div>
                             <el-select
-                                    style="min-width: 120px; width: 60%"
+                                    style="min-width: 130px; width: 60%; margin-right: 10px"
                                     clearable
                                     filterable
                                     placeholder="请选择数据集"
@@ -45,8 +45,7 @@
                         </div>
                     </div>
 
-
-                    <div class="content_item_container" style="width: 76%; min-width: 400px; margin-right: 2%">
+                    <div class="content_item_container" style="width: 74%; min-width: 400px; margin-right: 2%">
                         <div class="content_item_title_container">分片示意</div>
                         <div class="table_container">
                             <el-table :data="keyParameter" border header-align="center" style="min-width: 400px">
@@ -522,8 +521,8 @@
     .select_title {
         font-size: 14px;
         color: #666666;
-        width: 50px;
-        min-width: 50px;
+        width: 60px;
+        min-width: 60px;
         text-align: center;
         margin-right: 10px;
     }
