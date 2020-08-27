@@ -9,7 +9,7 @@
                 <div style="display: flex; flex-direction: row">
                     <div class="content_item_container" style="width: 20%; margin-right: 2%">
                         <div class="content_item_title_container">选择负载</div>
-                        <div class="select_container" style="min-width: 180px; width: 100%">
+                        <div class="select_container" style="width: 100%">
                             <div class="select_title">负载:</div>
                             <el-select
                                     style="min-width: 120px; width: 60%"
@@ -398,6 +398,7 @@
     mounted() {
       this.drawLine();
       let that = this;
+      that.random();
       setInterval(function () {
         that.random();
       }, timeSpace);
@@ -521,8 +522,8 @@
     .select_title {
         font-size: 14px;
         color: #666666;
-        width: 60px;
-        min-width: 60px;
+        width: 50px;
+        min-width: 50px;
         text-align: center;
         margin-right: 10px;
     }

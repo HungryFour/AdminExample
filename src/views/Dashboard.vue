@@ -53,7 +53,7 @@
 
             <div class="main_data_item_container">
                 <div class="main_data_item_title">CPU Usage Rate</div>
-                <div id="cpuChart" :style="{ width: '300px', height: '300px' }"></div>
+                <div id="cpuChart" :style="{ width: '80%', height: '300px', left: '10%' }"></div>
             </div>
 
             <div class="main_data_item_container">
@@ -61,12 +61,12 @@
 
                 <div class="main_data_item_chart_container">
                     <div class="main_data_item_chart_title">upload</div>
-                    <div id="networkSpeedUploadChart" :style="{ width: '300px', height: '80px' }"></div>
+                    <div id="networkSpeedUploadChart" :style="{ width: '80%', height: '80px' }"></div>
                 </div>
 
                 <div class="main_data_item_chart_container" style="margin-top: 10px">
                     <div class="main_data_item_chart_title">download</div>
-                    <div id="networkSpeedDownloadChart" :style="{ width: '300px', height: '80px'}"></div>
+                    <div id="networkSpeedDownloadChart" :style="{ width: '80%', height: '80px'}"></div>
                 </div>
             </div>
 
@@ -75,19 +75,19 @@
 
                 <div class="main_data_item_chart_container">
                     <div class="main_data_item_chart_title">input</div>
-                    <div id="ioThroughputInputChart" :style="{ width: '300px', height: '80px' }"></div>
+                    <div id="ioThroughputInputChart" :style="{ width: '80%', height: '80px' }"></div>
                 </div>
 
                 <div class="main_data_item_chart_container" style="margin-top: 10px">
                     <div class="main_data_item_chart_title">output</div>
-                    <div id="ioThroughputOutputChart" :style="{ width: '300px', height: '80px'}"></div>
+                    <div id="ioThroughputOutputChart" :style="{ width: '80%', height: '80px'}"></div>
                 </div>
 
             </div>
 
             <div class="main_data_item_container">
                 <div class="main_data_item_title">Disk Usage Rate</div>
-                <div id="diskChart" :style="{ width: '300px', height: '300px' }"></div>
+                <div id="diskChart" :style="{ width: '80%', height: '300px', left: '10%'}"></div>
             </div>
         </div>
     </div>
@@ -691,7 +691,19 @@
         that.random();
       }, timeSpace);
 
+      window.onresize = function() {
+        that.cpuChart.resize();
+        that.networkSpeedUploadChart.resize();
+        that.networkSpeedDownloadChart.resize();
+        that.ioThroughputInputChart.resize();
+        that.ioThroughputOutputChart.resize();
+        that.diskChart.resize();
+      }
     },
+    destroyed(){
+      window.onresize = null;
+    },
+
     methods: {
       random() {
         this.changeCount += 1;
@@ -732,6 +744,8 @@
 
         this.diskChart = echarts.init(document.getElementById("diskChart"));
         this.diskChart.setOption(this.diskOption);
+
+
       }
     }
   };
@@ -756,9 +770,10 @@
 
     .main_data_item_container {
         display: flex;
-        width: 300px;
+        justify-content: center;
+        width: 20%;
         height: 320px;
-        margin-right: 100px;
+        margin-right: 5%;
         flex-direction: column;
         border-radius: 2px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
